@@ -1,0 +1,12 @@
+<h1>更新</h1>
+<%= form_with model: @user, url: "/users/#{@user.id}", method: :patch, local: true do |frm| %>
+  <p>
+    お名前：
+    <%= frm.text_field :name %>
+  </p>
+  <p>
+    年齢：
+    <%= frm.text_field :age %>
+  </p>
+  <%= frm.submit "送信" %>
+<% end %>

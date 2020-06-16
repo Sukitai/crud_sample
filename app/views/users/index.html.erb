@@ -1,0 +1,10 @@
+<%= link_to "登録画面へ", "/users/new" %>
+<% @users.each do |user| %>
+  <p>
+    <%= user.name %>
+    <%= user.age %>
+    <%= link_to "削除", "/users/#{user.id}", style: "margin-left: 30px", method: :delete %>
+    <%= link_to "編集", "/users/#{user.id}/edit", style: "margin-left: 15px", method: :get %>
+    <hr>
+  </p>
+<% end %>
