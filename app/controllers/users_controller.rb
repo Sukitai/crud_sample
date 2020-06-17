@@ -28,6 +28,10 @@ class UsersController < ApplicationController
     redirect_to action: :index
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :age)
